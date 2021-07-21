@@ -1,0 +1,16 @@
+doctype html
+html
+	head
+		title= title
+		style(href="static/style.css", rel="stylesheet")
+	body
+		p= title
+		if status
+			p= status
+		form(action="/", id="form1", method="POST")
+			input(type="text", name="username")
+			input(type="password", name="password")
+			button(id="submit" value="send", text="send")
+
+		script(src="static/jquery-3.5.1.js")
+		script(src="static/main.js")
